@@ -1,2 +1,2 @@
-# Djnago_Project
+# Django_Project
 Dynamic content
