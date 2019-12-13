@@ -13,3 +13,5 @@
   configured in the SQL connection. So migration should be done to run code, else it will error out.
 
 # Django is awesome.
+
+# Django unzipped and added.
