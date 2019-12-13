@@ -1,0 +1,35 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IndexPage</title>
+</head>
+<body bgcolor="#00ffff">
+<h1>Hello Brother!!!{{name}}</h1>
+<a href="display">Click me</a>
+<a href="register">Register</a>
+
+<form action="add" method="POST">
+    {% csrf_token %}
+    Enter num1:: <input type="text" name="num1"><br>
+    Enter num2:: <input type="text" name="num2"><br>
+    <input type="submit"><br>
+    <h2>Are values Empty,{{ nam2}}</h2>
+
+</form>
+
+{% for dest in dest1 %}
+<h2>{{ dest.placeName}}</h2>
+<h3>{{ dest.desc}}</h3>
+{% if dest.offer %}
+    <h3><strong><I>Special Offer</I></strong></h3>
+{% endif %}
+<h2>Rs.{{ dest.price}}</h2>
+<img src="{{dest.img.url}}" alt="">
+{% endfor %}
+
+</body>
+</html>
